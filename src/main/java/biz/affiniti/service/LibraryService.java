@@ -33,5 +33,19 @@ public class LibraryService {
 	
 	}
 
+
+	public Book updateBook(Book book, long id) {
+		Book existingBook = libraryRepository.findById(id).orElseThrow(null);
+		
+		existingBook.setBookName(book.getBookName());
+		existingBook.setIsbn(book.getIsbn());
+		existingBook.setRegisterdNumber(book.getRegisterdNumber());
+		existingBook.setIssuedDate(book.getIssuedDate());
+		
+		libraryRepository.save(existingBook);
+		
+		return existingBook;
+	}
+
 	
 }
