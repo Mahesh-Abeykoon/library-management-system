@@ -25,4 +25,13 @@ public class LibraryService {
 		return libraryRepository.findAll();
 	}
 	
+
+	
+	public Book getBookByID(long id) {
+		
+		return libraryRepository.findById(id).orElseThrow(null);
+	
+	}
+
+	
 }
