@@ -82,4 +82,8 @@ public class Book {
 		this.issuedDate = issuedDate;
 	}
 	
+	public Book() {
+		
+	}
+	
 }
