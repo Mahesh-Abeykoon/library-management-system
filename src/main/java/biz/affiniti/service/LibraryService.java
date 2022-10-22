@@ -47,5 +47,13 @@ public class LibraryService {
 		return existingBook;
 	}
 
+
+	public void deleteBook(long id) {
+
+		libraryRepository.findById(id).orElseThrow(null);
+		libraryRepository.deleteById(id);
+		
+	}
+
 	
 }
